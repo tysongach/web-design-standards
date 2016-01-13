@@ -1,6 +1,11 @@
+// Variables
+
+$accordion-border: 3px solid $color-gray-lightest;
+
+// Accordion Styles
+
 .usa-accordion,
 .usa-accordion-bordered {
-
   + .usa-accordion,
   + .usa-accordion-bordered {
     margin-top: 1rem;
@@ -9,11 +14,10 @@
   > ul {
     color: $color-base;
     margin: 0;
-    overflow: hidden;
     padding: 0;
     width: 100%;
 
-    > li{
+    > li {
       background-color: $color-gray-lightest;
       font-family: $font-sans;
       list-style: none;
@@ -25,22 +29,15 @@
   button[aria-expanded=false] {
     background-image: url('../img/plus.png');
     background-image: url('../img/plus.svg');
-    background-position: 90.5%;
     background-repeat: no-repeat;
-    background-size: 13px;
-    @include media($small-screen) {
-      background-position: 96.5%;
-    }
+    background-size: 1.3rem;
   }
 
   button {
-    @include media($small-screen) {
-      background-position: 96.5%;
-    }
     background-color: $color-gray-lightest;
     background-image: url('../img/minus.png');
     background-image: url('../img/minus.svg');
-    background-position: 90.5%;
+    background-position: right 3rem center;
     background-repeat: no-repeat;
     background-size: 13px;
     color: $color-base;
@@ -48,8 +45,12 @@
     display: inline-block;
     font-family: $font-sans;
     margin: 0;
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 5.5rem 1.5rem 3rem;
     width: 100%;
+
+    &:focus {
+      box-shadow: $focus-shadow;
+    }
 
     &:hover {
       background-color: $color-gray-lighter;
@@ -64,25 +65,23 @@
 
 .usa-accordion-bordered {
   .usa-accordion-content {
-    border: {
-      bottom: 3px solid $color-gray-lightest;
-      left: 3px solid $color-gray-lightest;
-      right: 3px solid $color-gray-lightest;
-    }
+    border-bottom: $accordion-border;
+    border-left: $accordion-border;
+    border-right: $accordion-border;
   }
 }
 
 .usa-accordion-content {
+  background-color: $color-white;
   display: block;
-  background-color: white;
   overflow: auto;
   padding: 3rem;
 
-  *:first-child {
+  > *:first-child {
     margin-top: 0;
   }
 
-  *:last-child {
+  > *:last-child {
     margin-bottom: 0;
   }
 }

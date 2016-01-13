@@ -1,18 +1,19 @@
 .skipnav {
-  padding: 10px 15px;
-  position: absolute;
-  top: -42px;
-  left: 0px;
-  color: $color-base;
+  @include transition(all .2s ease-in-out);
   background: transparent;
-  @include transition(top 1s ease-out, background 1s linear);
+  color: $color-base;
+  left: 0;
+  padding: 1rem 1.5rem;
+  position: absolute;
+  top: -4.2rem;
   z-index: 100;
+  
   &:focus {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    background: white;
+    @include transition(all .2s ease-in-out);
+    background: $color-white;
+    left: 0;
     outline: 0;
-    @include transition(top .1s ease-in, background .5s linear);
+    position: absolute;
+    top: 0;
   }
 }

@@ -16,6 +16,7 @@ $h5-font-size:        rem(15px) !default;
 $h6-font-size:        rem(13px) !default;
 $base-line-height:    1.5 !default;
 $heading-line-height: 1.3 !default;
+$lead-line-height:    1.7 !default;
 
 $font-sans:           'Source Sans Pro', 'Helvetica', 'Arial', sans-serif !default;
 $font-serif:          'Merriweather', 'Georgia', 'Times New Roman', serif;
@@ -46,9 +47,10 @@ $color-base:                 #212121 !default;
 
 $color-gray-dark:            #323a45 !default;
 $color-gray:                 #205493 !default; // lighten($color-gray-dark, 20%)
+$color-gray-medium:          #757575 !default; // lightest gray that passes color contrast
 $color-gray-light:           #aeb0b5 !default; // lighten($color-gray-dark, 60%)
 $color-gray-lighter:         #d6d7d9 !default; // lighten($color-gray-dark, 80%)
-$color-gray-lightest:        #efefef !default; // lighten($color-gray-dark, 90%)
+$color-gray-lightest:        #f1f1f1 !default; // lighten($color-gray-dark, 91%)
 
 $color-gray-warm-dark:       #494440 !default;
 $color-gray-warm-light:      #e4e2e0 !default; // lighten($color-gray-warm-dark, 90%)
@@ -86,6 +88,6 @@ $site-margins:      3rem !default;
 $article-max-width: 600px !default;
 $input-max-width:   46rem !default;
 $border-radius:     rem(3px) !default;
-$box-shadow:        0 0 2px rgba(#000, .3) !default;
+$box-shadow:        0 0 2px rgba(#000, 0.3) !default;
 $focus-shadow:      0 0 3px $color-focus, 0 0 7px $color-focus;
 $grid-margins:      3rem !default;
